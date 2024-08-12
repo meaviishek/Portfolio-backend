@@ -6,14 +6,14 @@ const app = express();
 app.use(cors());
 app.use(json());
 
-// connect('mongodb+srv://meaviishek:<password>@viewcounterdb.41dh7ik.mongodb.net/?retryWrites=true&w=majority&appName=viewCounterDB', {
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true,
-// });
-connect('mongodb://localhost:27017/viewCounterDB', {
+connect('mongodb+srv://meaviishek:r7EY2JNfa78bafPL@viewcounterdb.41dh7ik.mongodb.net/?retryWrites=true&w=majority&appName=viewCounterDB', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
+// connect('mongodb://localhost:27017/viewCounterDB', {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+// });
 
 const viewSchema = new Schema({
     totalViews: { type: Number, default: 0 },
