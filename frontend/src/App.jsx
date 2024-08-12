@@ -16,10 +16,11 @@ function App() {
             userId = uuidv4();
             localStorage.setItem('userId', userId);
         }
+        
 
         async function fetchViewCounts() {
             try {
-                const response = await axios.post('http://localhost:5000/views', { userId });
+                const response = await axios.post('https://portfolio-backend-delta-ochre.vercel.app/views', { userId });
                 setViewCount(response.data.totalViews);
                 setUniqueCount(response.data.uniqueVisitors);
             } catch (error) {
