@@ -6,7 +6,7 @@ const app = express();
 app.use(cors());
 app.use(json());
 
-connect('mongodb+srv://meaviishek:r7EY2JNfa78bafPL@viewcounterdb.41dh7ik.mongodb.net/?retryWrites=true&w=majority&appName=viewCounterDB', {
+connect('mongodb+srv://meaviishek:abhi123@cluster0.gsijojy.mongodb.net/viewCounterDB?retryWrites=true&w=majority&appName=Cluster0', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
