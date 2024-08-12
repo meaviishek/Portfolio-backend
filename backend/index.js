@@ -4,8 +4,8 @@ import cors from 'cors';
 
 const app = express();
 app.use(cors({
-    origin: 'https://www.abhi101.in', // Replace with your frontend domain
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    origin: 'https://abhi101.in', // Replace with your frontend domain
+    methods: ['GET', 'POST'],
     credentials: true, // If your requests include credentials like cookies
 }));
 app.use(json());
