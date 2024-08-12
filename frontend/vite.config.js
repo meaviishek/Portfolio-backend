@@ -6,7 +6,7 @@ export default defineConfig({
   server:{
     proxy:{
       'views':'https://portfolio-backend-delta-ochre.vercel.app'
-    }
-  }
+    },
+  },
   plugins: [react()],
 })
