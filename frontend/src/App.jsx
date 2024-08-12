@@ -4,32 +4,38 @@ import { MdMarkEmailUnread} from "react-icons/md";
 import{profile} from "./components";
 import { NavLink,Outlet } from "react-router-dom";
 import  { useEffect, useState } from 'react';
-import { v4 as uuidv4 } from 'uuid';
+
 import axios from 'axios';
+
+
+function generateId() {
+  return crypto.getRandomValues(new Uint32Array(1))[0].toString(36);
+}
+
+
 function App() {
   const [viewCount, setViewCount] = useState(0);
-    const [uniqueCount, setUniqueCount] = useState(0);
+  const [uniqueCount, setUniqueCount] = useState(0);
 
-    useEffect(() => {
-        let userId = localStorage.getItem('userId');
-        if (!userId) {
-            userId = uuidv4();
-            localStorage.setItem('userId', userId);
-        }
-        
+  useEffect(() => {
+      let userId = localStorage.getItem('userId');
+      if (!userId) {
+          userId = generateId();
+          localStorage.setItem('userId', userId);
+      }
 
-        async function fetchViewCounts() {
-            try {
-                const response = await axios.post('https://portfolio-backend-delta-ochre.vercel.app/views', { userId });
-                setViewCount(response.data.totalViews);
-                setUniqueCount(response.data.uniqueVisitors);
-            } catch (error) {
-                console.error('Error fetching view counts:', error);
-            }
-        }
+      async function fetchViewCounts() {
+          try {
+              const response = await axios.post('http://localhost:5000/views', { userId });
+              setViewCount(response.data.totalViews);
+              setUniqueCount(response.data.uniqueVisitors);
+          } catch (error) {
+              console.error('Error fetching view counts:', error);
+          }
+      }
 
-        fetchViewCounts();
-    }, []);
+      fetchViewCounts();
+  }, []);
 
   return (
     
