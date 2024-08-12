@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   server:{
     proxy:{
-      'views':'https://portfolio-backend-delta-ochre.vercel.app'
+      '/views':'https://portfolio-backend-delta-ochre.vercel.app'
     },
   },
   plugins: [react()],
