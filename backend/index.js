@@ -3,11 +3,12 @@ import { connect, Schema, model } from 'mongoose';
 import cors from 'cors';
 
 const app = express();
-app.use(cors({
-    origin: '*', // Replace with your frontend domain
-    methods: ['GET', 'POST'],
-    credentials: true, // If your requests include credentials like cookies
-}));
+app.use(cors())
+// app.use(cors({
+//     origin: '*', // Replace with your frontend domain
+//     methods: ['GET', 'POST'],
+//     credentials: true, // If your requests include credentials like cookies
+// }));
 app.use(json());
 
 connect('mongodb+srv://meaviishek:abhi123@cluster0.gsijojy.mongodb.net/viewCounterDB?retryWrites=true&w=majority&appName=Cluster0', {

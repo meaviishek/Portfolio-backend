@@ -26,7 +26,7 @@ function App() {
 
       async function fetchViewCounts() {
           try {
-              const response = await axios.post('https://portfolio-backend-delta-ochre.vercel.app/views', { userId });
+              const response = await axios.post('/views', { userId });
               setViewCount(response.data.totalViews);
               setUniqueCount(response.data.uniqueVisitors);
           } catch (error) {
