@@ -34,9 +34,9 @@ In addition to my technical pursuits, I bring a creative flair to my endeavors. 
   </motion.div>
   <hr className="h-px my-4 w-full border-0 bg-[#2B2B2C]"/> 
 
-<div className="md:flex md:space-x-20">
+<div className="md:flex  ">
 
-<div>
+<div  className="mr-44" >
 <div className="flex  bg-[#2B2B2C] w-[175px] rounded-lg p-2">
   <FaBook size="25px" color="CA8A04"/>
   <h1 className="ml-3 text-[22px] font-semibold">Education</h1>
@@ -98,7 +98,7 @@ In addition to my technical pursuits, I bring a creative flair to my endeavors. 
 <div className="hidden md:block border-l border-[#2B2B2C] h-full my-4"></div>
 </div>
 
-<div>
+<div className="ml-14">
 <div className="flex  bg-[#2B2B2C] w-[200px] rounded-lg p-2">
   <GiAchievement size="30px" color="CA8A04"/>
   <h1 className="ml-3 text-[22px] font-semibold">Achievements</h1>
