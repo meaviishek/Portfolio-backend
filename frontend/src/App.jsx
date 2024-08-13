@@ -65,10 +65,10 @@ function App() {
               <hr className="h-px my-4 w-full border-0 bg-[#2B2B2C]"/> 
               <div className="flex space-x-4 font-semibold text-sm">
               <div className=" px-3  bg-[#2B2B2C] p-2 rounded-xl shadow-slate-900 shadow-sm">
-              <h3 className="">Total Views: {viewCount}</h3>
+              <h3 className="">Views: {viewCount}</h3>
               </div>
               <div className="px-3  bg-[#2B2B2C] p-2 rounded-xl shadow-slate-900 shadow-sm">
-              <h3>New Visitors: {uniqueCount}</h3>
+              <h3>Unique Visitors: {uniqueCount}</h3>
               </div>
               </div>
               <hr className="h-px my-4 w-full border-0 bg-[#2B2B2C]"/> 
