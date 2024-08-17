@@ -23,12 +23,21 @@ function App() {
           userId = generateId();
           localStorage.setItem('userId', userId);
       }
-
+      const cachedViewCount = localStorage.getItem('viewCount');
+      const cachedUniqueCount = localStorage.getItem('uniqueCount');
+      
+      if (cachedViewCount && cachedUniqueCount) {
+          setViewCount(parseInt(cachedViewCount, 10));
+          setUniqueCount(parseInt(cachedUniqueCount, 10));
+      }
       async function fetchViewCounts() {
           try {
               const response = await axios.post('https://portfolio-backend-delta-ochre.vercel.app/views', { userId });
               setViewCount(response.data.totalViews);
               setUniqueCount(response.data.uniqueVisitors);
+
+        localStorage.setItem('viewCount', response.data.totalViews);
+        localStorage.setItem('uniqueCount', response.data.uniqueVisitors);
           } catch (error) {
               console.error('Error fetching view counts:', error);
           }
