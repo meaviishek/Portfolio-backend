@@ -43,10 +43,10 @@ app.post('/views', async (req, res) => {
     if (!views.visitorIds.includes(userId)) {
         views.uniqueVisitors += 1;
         views.visitorIds.push(userId);
-        await views.save();
+      
     }
 
-   
+    await views.save();
     res.json({ totalViews: views.totalViews, uniqueVisitors: views.uniqueVisitors });
 });
 
