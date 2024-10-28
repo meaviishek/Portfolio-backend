@@ -1,229 +1,100 @@
-
 import { TiHtml5 } from "react-icons/ti";
-import { RiTailwindCssFill,RiJavascriptFill } from "react-icons/ri";
-import { FaReact,FaPython,FaGit } from "react-icons/fa";
-import { BiLogoPostgresql,BiLogoFlask,BiLogoCPlusPlus} from "react-icons/bi";
+import { RiTailwindCssFill, RiJavascriptFill } from "react-icons/ri";
+import { FaReact, FaPython, FaGit } from "react-icons/fa";
+import { BiLogoPostgresql, BiLogoFlask, BiLogoCPlusPlus } from "react-icons/bi";
 import { SiMysql } from "react-icons/si";
-import { motion, useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
 
 function Skills() {
+  // Define strokeDashoffset values for each icon
+  const iconDashOffsets = {
+    html: 30,
+    tailwind: 50,
+    react: 40,
+    flask: 20,
+    javascript: 60,
+    python: 25,
+    cpp: 45,
+    git: 35,
+    postgres: 55,
+    mysql: 15,
+  };
+
   return (
-    <motion.div initial={{
-      opacity: 0,
-      // if odd index card,slide from right instead of left
-      y:  50 
-    }}
-    whileInView={{
-      opacity: 1,
-      y: 0, // Slide in to its original position
-      transition: {
-        duration: 0.5 // Animation duration
-      }
-    }}
-    viewport={{ once: true }}   >
-        <div className="grid gap-5 md:grid-cols-2 md:gap-5 md:mt-10">
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
+      viewport={{ once: true }}
+      className="max-w-7xl mx-auto px-4"
+    >
+      <div className="grid gap-8 lg:grid-cols-2 md:gap-10">
+        
+        {/* Frontend / Backend Section */}
+        <div className="rounded-xl bg-[#272728] p-6 text-center shadow-xl transition-transform duration-300 hover:scale-105">
+          <h1 className="text-xl font-medium text-gray-300 mb-4">Frontend / Backend</h1>
+          <div className="flex justify-center gap-6 flex-wrap">
+            <IconCard icon={<TiHtml5 className="text-5xl" />} strokeOffset={iconDashOffsets.html} />
+            <IconCard icon={<RiTailwindCssFill className="text-5xl" />} strokeOffset={iconDashOffsets.tailwind} />
+            <IconCard icon={<FaReact className="text-5xl" />} strokeOffset={iconDashOffsets.react} />
+            <IconCard icon={<BiLogoFlask className="text-5xl" />} strokeOffset={iconDashOffsets.flask} />
+          </div>
+        </div>
 
+        {/* Languages Section */}
+        <div className="rounded-xl bg-[#272728] p-6 text-center shadow-xl transition-transform duration-300 hover:scale-105">
+          <h1 className="text-xl font-medium text-gray-300 mb-4">Languages</h1>
+          <div className="flex justify-center gap-6 flex-wrap">
+            <IconCard icon={<RiJavascriptFill className="text-5xl" />} strokeOffset={iconDashOffsets.javascript} />
+            <IconCard icon={<FaPython className="text-5xl" />} strokeOffset={iconDashOffsets.python} />
+            <IconCard icon={<BiLogoCPlusPlus className="text-5xl" />} strokeOffset={iconDashOffsets.cpp} />
+          </div>
+        </div>
 
-<div className="rounded-xl  bg-[#272728] p-4 text-center shadow-xl md:hover:scale-100 translate-all duration-300">
-     
-      <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Frontend / Backend</h1>
-      <div className="flex gap-5 md:gap-10">
-
-
-      <div className="relative size-14 md:size-20">
-  <svg className="size-full" width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
- 
-    <circle cx="18" cy="18" r="16" fill="none" className="stroke-current text-gray-200 dark:text-neutral-700" strokeWidth="2"></circle>
-    
-    <g className="origin-center -rotate-90 transform">
-      <circle cx="18" cy="18" r="16" fill="none" className="stroke-current text-blue-600 dark:text-yellow-600" strokeWidth="2" strokeDasharray="100" strokeDashoffset="10"></circle>
-    </g>
-  </svg>
-
-  <div className="absolute top-1/2 start-1/2 transform -translate-y-1/2 -translate-x-1/2">
-    <span className="text-center text-2xl font-bold text-gray-800 dark:text-white"> <TiHtml5 className="text-4xl md:text-5xl"/></span>
-  </div>
-</div>
-
-
-<div className="relative size-14 md:size-20">
-  <svg className="size-full" width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
- 
-    <circle cx="18" cy="18" r="16" fill="none" className="stroke-current text-gray-200 dark:text-neutral-700" strokeWidth="2"></circle>
-    
-    <g className="origin-center -rotate-90 transform">
-      <circle cx="18" cy="18" r="16" fill="none" className="stroke-current text-blue-600 dark:text-yellow-600" strokeWidth="2" strokeDasharray="100" strokeDashoffset="15"></circle>
-    </g>
-  </svg>
-
-  <div className="absolute top-1/2 start-1/2 transform -translate-y-1/2 -translate-x-1/2">
-    <span className="text-center text-2xl font-bold text-gray-800 dark:text-white"> <RiTailwindCssFill className="text-4xl md:text-5xl"/></span>
-  </div>
-</div>
-
-
-<div className="relative size-14 md:size-20">
-  <svg className="size-full" width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
- 
-    <circle cx="18" cy="18" r="16" fill="none" className="stroke-current text-gray-200 dark:text-neutral-700" strokeWidth="2"></circle>
-    
-    <g className="origin-center -rotate-90 transform">
-      <circle cx="18" cy="18" r="16" fill="none" className="stroke-current text-blue-600 dark:text-yellow-600" strokeWidth="2" strokeDasharray="100" strokeDashoffset="20"></circle>
-    </g>
-  </svg>
-
-  <div className="absolute top-1/2 start-1/2 transform -translate-y-1/2 -translate-x-1/2">
-    <span className="text-center text-2xl font-bold text-gray-800 dark:text-white"> <FaReact className="text-4xl md:text-5xl"/></span>
-  </div>
-</div>
-
-<div className="relative size-20">
-  <svg className="size-full" width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
- 
-    <circle cx="18" cy="18" r="16" fill="none" className="stroke-current text-gray-200 dark:text-neutral-700" strokeWidth="2"></circle>
-    
-    <g className="origin-center -rotate-90 transform">
-      <circle cx="18" cy="18" r="16" fill="none" className="stroke-current text-blue-600 dark:text-yellow-600" strokeWidth="2" strokeDasharray="100" strokeDashoffset="15"></circle>
-    </g>
-  </svg>
-
-  <div className="absolute top-1/2 start-1/2 transform -translate-y-1/2 -translate-x-1/2">
-    <span className="text-center text-2xl font-bold text-gray-800 dark:text-white"> <BiLogoFlask  className=" text-3xl md:text-5xl"/></span>
-  </div>
-</div>
-
-
-    </div>
-    </div>
-
-
-    <div className="rounded-xl bg-[#272728] p-4 text-center shadow-xl md:hover:scale-100 translate-all duration-300">
-    
-      <h1 className="text-darken mb-3 text-xl font-medium lg:px-14">Languages</h1>
-      <div className="flex flex-auto gap-5 md:gap-10">
-
-
-      <div className="relative size-14 md:size-20">
-  <svg className="size-full" width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
- 
-    <circle cx="18" cy="18" r="16" fill="none" className="stroke-current text-gray-200 dark:text-neutral-700" strokeWidth="2"></circle>
-    
-    <g className="origin-center -rotate-90 transform">
-      <circle cx="18" cy="18" r="16" fill="none" className="stroke-current text-blue-600 dark:text-yellow-600" strokeWidth="2" strokeDasharray="100" strokeDashoffset="35"></circle>
-    </g>
-  </svg>
-
-  <div className="absolute top-1/2 start-1/2 transform -translate-y-1/2 -translate-x-1/2">
-    <span className="text-center text-2xl font-bold text-gray-800 dark:text-white"> <RiJavascriptFill className="text-4xl md:text-5xl"/></span>
-  </div>
-</div>
-
-
-<div className="relative size-14 md:size-20">
-  <svg className="size-full" width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
- 
-    <circle cx="18" cy="18" r="16" fill="none" className="stroke-current text-gray-200 dark:text-neutral-700" strokeWidth="2"></circle>
-    
-    <g className="origin-center -rotate-90 transform">
-      <circle cx="18" cy="18" r="16" fill="none" className="stroke-current text-blue-600 dark:text-yellow-600" strokeWidth="2" strokeDasharray="100" strokeDashoffset="40"></circle>
-    </g>
-  </svg>
-
-  <div className="absolute top-1/2 start-1/2 transform -translate-y-1/2 -translate-x-1/2">
-    <span className="text-center text-2xl font-bold text-gray-800 dark:text-white"> <FaPython className="text-4xl md:text-5xl"/></span>
-  </div>
-</div>
-
-
-<div className="relative size-14 md:size-20">
-  <svg className="size-full" width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
- 
-    <circle cx="18" cy="18" r="16" fill="none" className="stroke-current text-gray-200 dark:text-neutral-700" strokeWidth="2"></circle>
-    
-    <g className="origin-center -rotate-90 transform">
-      <circle cx="18" cy="18" r="16" fill="none" className="stroke-current text-blue-600 dark:text-yellow-600" strokeWidth="2" strokeDasharray="100" strokeDashoffset="20"></circle>
-    </g>
-  </svg>
-
-  <div className="absolute top-1/2 start-1/2 transform -translate-y-1/2 -translate-x-1/2">
-    <span className="text-center text-2xl font-bold text-gray-800 dark:text-white"> <BiLogoCPlusPlus className="text-4xl md:text-5xl"/></span>
-  </div>
-</div>
-
-
-    </div>
-    
-</div>
-
-
-
-</div>
-
-<div className="rounded-xl mt-5 bg-[#272728] p-4 text-center shadow-xl md:hover:scale-100 translate-all duration-300">
-    
-      <h1 className="text-darken  text-xl font-medium lg:px-14">Others</h1>
-      <div className="flex  gap-5 md:gap-10">
-
-
-      <div className="relative size-20 ">
-  <svg className="size-full" width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
- 
-    <circle cx="18" cy="18" r="16" fill="none" className="stroke-current text-gray-200 dark:text-neutral-700" strokeWidth="2"></circle>
-    
-    <g className="origin-center -rotate-90 transform">
-      <circle cx="18" cy="18" r="16" fill="none" className="stroke-current text-blue-600 dark:text-yellow-600" strokeWidth="2" strokeDasharray="100" strokeDashoffset="25"></circle>
-    </g>
-  </svg>
-
-  <div className="absolute top-1/2 start-1/2 transform -translate-y-1/2 -translate-x-1/2">
-    <span className="text-center text-2xl font-bold text-gray-800 dark:text-white"> <FaGit  className=" text-3xl md:text-5xl"/></span>
-  </div>
-</div>
-
-
-<div className="relative size-20">
-  <svg className="size-full" width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
- 
-    <circle cx="18" cy="18" r="16" fill="none" className="stroke-current text-gray-200 dark:text-neutral-700" strokeWidth="2"></circle>
-    
-    <g className="origin-center -rotate-90 transform">
-      <circle cx="18" cy="18" r="16" fill="none" className="stroke-current text-blue-600 dark:text-yellow-600" strokeWidth="2" strokeDasharray="100" strokeDashoffset="15"></circle>
-    </g>
-  </svg>
-
-  <div className="absolute top-1/2 start-1/2 transform -translate-y-1/2 -translate-x-1/2">
-    <span className="text-center text-2xl font-bold text-gray-800 dark:text-white"> <BiLogoPostgresql  className=" text-3xl md:text-5xl"/></span>
-  </div>
-</div>
-
-
-
-
-<div className="relative size-20">
-  <svg className="size-full" width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
- 
-    <circle cx="18" cy="18" r="16" fill="none" className="stroke-current text-gray-200 dark:text-neutral-700" strokeWidth="2"></circle>
-    
-    <g className="origin-center -rotate-90 transform">
-      <circle cx="18" cy="18" r="16" fill="none" className="stroke-current text-blue-600 dark:text-yellow-600" strokeWidth="2" strokeDasharray="100" strokeDashoffset="25"></circle>
-    </g>
-  </svg>
-
-  <div className="absolute top-1/2 start-1/2 transform -translate-y-1/2 -translate-x-1/2">
-    <span className="text-center text-2xl font-bold text-gray-800 dark:text-white"> <SiMysql  className=" text-3xl md:text-5xl"/></span>
-  </div>
-</div>
-
-
-    </div>
-    
-</div>
-
-
-
-</motion.div>
-    
-  )
+        {/* Others Section */}
+        <div className="rounded-xl bg-[#272728] p-6 text-center shadow-xl transition-transform duration-300 hover:scale-105">
+          <h1 className="text-xl font-medium text-gray-300 mb-4">Others</h1>
+          <div className="flex justify-center gap-6 flex-wrap">
+            <IconCard icon={<FaGit className="text-5xl" />} strokeOffset={iconDashOffsets.git} />
+            <IconCard icon={<BiLogoPostgresql className="text-5xl" />} strokeOffset={iconDashOffsets.postgres} />
+            <IconCard icon={<SiMysql className="text-5xl" />} strokeOffset={iconDashOffsets.mysql} />
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  );
 }
 
-export default Skills
+// Component for individual icons
+const IconCard = ({ icon, strokeOffset }) => (
+  <div className="relative w-20 h-20 flex items-center justify-center">
+    <svg
+      className="absolute w-full h-full"
+      viewBox="0 0 36 36"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle
+        cx="18"
+        cy="18"
+        r="16"
+        fill="none"
+        className="stroke-current text-gray-700"
+        strokeWidth="1"
+      />
+      <g className="origin-center -rotate-90 transform">
+        <circle
+          cx="18"
+          cy="18"
+          r="16"
+          fill="none"
+          className="stroke-current text-yellow-600"
+          strokeWidth="2"
+          strokeDasharray="100"
+          strokeDashoffset={strokeOffset} // Use the dynamic value here
+        />
+      </g>
+    </svg>
+    <div className="z-10">{icon}</div>
+  </div>
+);
+
+export default Skills;
