@@ -115,27 +115,27 @@ function App() {
                
             </div>
             <div>
-      <div className="mb-1 text-xs font-medium dark:text-white">Node/Express</div>
+      <div className="mb-2 text-xs font-medium dark:text-white">Node/Express</div>
       <div className="w-full bg-gray-200 rounded-full h-1 dark:bg-[#383838]">
         <div className="bg-yellow-600 h-1 rounded-full animate-progress" style={{ width: "50%" }}></div>
       </div>
 
-      <div className="mb-1 mt-2 text-xs font-medium dark:text-white">C++</div>
+      <div className="mb-2 mt-2 text-xs font-medium dark:text-white">C++</div>
       <div className="w-full bg-gray-200 rounded-full h-1 dark:bg-[#383838]">
         <div className="bg-yellow-600 h-1 rounded-full animate-progress" style={{ width: "65%" }}></div>
       </div>
 
-      <div className="mb-1 mt-2 text-xs font-medium dark:text-white">Python</div>
+      <div className="mb-2 mt-2 text-xs font-medium dark:text-white">Python</div>
       <div className="w-full bg-gray-200 rounded-full h-1 dark:bg-[#383838]">
         <div className="bg-yellow-600 h-1 rounded-full animate-progress" style={{ width: "60%" }}></div>
       </div>
 
-      <div className="mb-1 mt-2 text-xs font-medium dark:text-white">Javascript</div>
+      <div className="mb-2 mt-2 text-xs font-medium dark:text-white">Javascript</div>
       <div className="w-full bg-gray-200 rounded-full h-1 dark:bg-[#383838]">
         <div className="bg-yellow-600 h-1 rounded-full animate-progress" style={{ width: "70%" }}></div>
       </div>
 
-      <div className="mb-1 mt-2 text-xs font-medium dark:text-white">AI/ML/Data Science</div>
+      <div className="mb-2 mt-2 text-xs font-medium dark:text-white">AI/ML/Data Science</div>
       <div className="w-full bg-gray-200 rounded-full h-1 dark:bg-[#383838]">
         <div className="bg-yellow-600 h-1 rounded-full animate-progress" style={{ width: "30%" }}></div>
       </div>
