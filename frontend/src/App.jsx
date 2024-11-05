@@ -88,14 +88,14 @@ function App() {
               <hr className="h-px my-4 w-full border-0 bg-[#2B2B2C]" />
               <div className="flex   sm:space-x-2 font-semibold text-sm text-white">
                 {/* Views */}
-                <div className="flex items-center px-5 py-2 bg-gradient-to-r from-[#1E1E1F] to-[#2e2e30] rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition duration-300 ease-in-out transform w-full sm:w-1/2">
+                <div className="flex items-center mx-auto px-2 py-2 bg-gradient-to-r from-[#1E1E1F] to-[#2e2e30] rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition duration-300 ease-in-out transform w-full sm:w-1/2">
                   <div className="mr-2">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-yellow-600" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M12 4.5C7.305 4.5 3.417 7.521 1.5 12c1.917 4.479 5.805 7.5 10.5 7.5s8.583-3.021 10.5-7.5c-1.917-4.479-5.805-7.5-10.5-7.5zm0 12c-2.481 0-4.5-2.019-4.5-4.5S9.519 7.5 12 7.5 16.5 9.519 16.5 12s-2.019 4.5-4.5 4.5zm0-7.5a3 3 0 100 6 3 3 0 000-6z" />
                     </svg>
                   </div>
-                  <div className="flex flex-row items-center space-x-2 text-center">
-                    <h3 className="text-xs sm:text-sm md:text-sm font-medium text-gray-400 uppercase tracking-wide">Views</h3>
+                  <div className="flex flex-row  items-center space-x-2 text-center">
+                    <h3 className=" text-xs font-medium text-gray-400 uppercase tracking-wide">Views</h3>
                     {loding ? (
                       <svg className="text-gray-300 animate-spin" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"
       width="24" height="24">
@@ -109,14 +109,14 @@ function App() {
     </svg>
    
                     ):(
-                      <span className="text-sm sm:text-lg md:text-xl font-bold text-yellow-600">{viewCount}</span>
+                      <span className="text-base sm:text-base md:text-lg  font-semibold text-yellow-600">{viewCount}</span>
                     )}
                  
                   </div>
                 </div>
 
                 {/* Unique Visitors */}
-                <div className="flex items-center px-5 py-2  bg-gradient-to-r from-[#1E1E1F] to-[#2e2e30] rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition duration-300 ease-in-out transform w-full sm:w-1/2">
+                <div className="flex items-center px-2 py-2  bg-gradient-to-r from-[#1E1E1F] to-[#2e2e30] rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition duration-300 ease-in-out transform w-full sm:w-1/2">
                   <div className="mr-2">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-yellow-600" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M12 12c1.72 0 3.112-1.392 3.112-3.112S13.72 5.776 12 5.776s-3.112 1.392-3.112 3.112S10.28 12 12 12zm0-4.776a1.664 1.664 0 110 3.328 1.664 1.664 0 010-3.328zM12 14.224c-4.12 0-6.92 2.8-6.92 6.92 0 .608.496 1.104 1.104 1.104h11.632a1.104 1.104 0 001.104-1.104c0-4.12-2.8-6.92-6.92-6.92zm-4.832 6.448c.312-2.696 2.552-4.832 4.832-4.832s4.52 2.136 4.832 4.832H7.168z" />
@@ -141,7 +141,7 @@ function App() {
    
   
 )
-                    :(<span className="text-base sm:text-lg md:text-xl font-extrabold text-yellow-600">{uniqueCount}</span>)}
+                    :(<span className="text-base sm:text-base md:text-lg font-semibold text-yellow-600">{uniqueCount}</span>)}
                   </div>
                 </div>
               </div>
@@ -151,7 +151,7 @@ function App() {
             <div>
               {["Node/Express", "C++", "Python", "Javascript", "AI/ML/Data Science"].map((skill, index) => (
                 <div key={index}>
-                  <div className="mb-2 text-xs font-medium dark:text-white">{skill}</div>
+                  <div className="mt-2 mb-1 text-sm font-medium dark:text-white">{skill}</div>
                   <div className="w-full bg-gray-200 rounded-full h-1 dark:bg-[#383838]">
                     <div
                       className="bg-yellow-600 h-1 rounded-full"
