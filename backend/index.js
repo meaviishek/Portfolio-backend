@@ -11,6 +11,7 @@ app.use(cors())
 // }));
 app.use(json());
 
+
 connect('mongodb+srv://meaviishek:abhi123@cluster0.gsijojy.mongodb.net/viewCounterDB?retryWrites=true&w=majority&appName=Cluster0', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
